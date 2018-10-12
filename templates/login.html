@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block header %} {% endblock %}
+
+{% block content %}
+         
+        {% if error %}
+          <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+          
+      <div class="content">
+        <div class="modal-header">
+          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form" action="{{ url_for('login') }}" method="post">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" name="username" class="form-control" id="usrname" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" name="password" class="form-control" id="psw" placeholder="Enter password" required>
+            </div>
+              <button type="submit" class="btn btn-block" id="loginBtn"><span class="glyphicon glyphicon-off"></span> Login </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Not a member? <a href="{{ url_for('registration') }}">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+
+{% endblock %}

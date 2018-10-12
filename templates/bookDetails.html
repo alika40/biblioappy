@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> LOG OUT </a>
+{% endblock %}
+
+{% block content %}
+
+    
+<div id="bookDetailsContainer">
+    
+    <h2 id="bookDetailsH2"> BOOK DETAILS</h2>
+    
+    <div id="bookDetailscontent">
+        
+        <h2> BIBLIOAPPY:</h2>
+        <div class="bookDetails">
+            <span><strong> BOOK TITLE: </strong> {{ book.title }}</span><br>
+            <span><strong> AUTHOR: </strong> {{ book.author }} </span><br>
+            <span><strong> PUBLISHED DATE: </strong> {{ book.published_date }}</span><br>
+            <span><strong> ISBN: </strong> {{ book.isbn }}</span><br>
+            <span><strong> REVIEW COUNT: </strong> {{ book.review_count }}</span><br>
+            <span><strong> AVERAGE RATING: </strong> {{ book.average_rating }}</span><br><br><br>
+        </div>
+        
+        <h2> FROM GOODREADS: </h2>
+        <div class="bookDetails">
+            <span><strong> ISBN: </strong> {{ apiReviews['isbn'] }}</span><br>
+            <span><strong> ISBN13: </strong> {{ apiReviews['isbn13'] }}</span><br>
+            <span><strong> TEXT REVIEW COUNT: </strong> {{ apiReviews['work_text_reviews_count'] }} </span><br>
+            <span><strong> REVIEW COUNT: </strong> {{ apiReviews['work_reviews_count'] }}</span><br>
+            <span><strong> RATING COUNT: </strong> {{ apiReviews['work_ratings_count'] }}</span><br>
+            <span><strong> AVERAGE RATING: </strong> {{ apiReviews['average_rating'] }}</span><br><br><br>
+        </div>
+        
+        <p class="bookDetails"><strong>REVIEWS: </strong></p>
+        <ul>
+            {% if editReview %}
+                <li style="list-style: none;">
+                    <span style="color: #341444; margin-bottom: 5px;"><strong>{{ editReview.username }}</strong></span><br>
+                    <img src="{{url_for('static', filename='image/avatar.jpg')}}" alt="avatar"/><br>
+                    <span class="bookIMG"> {{ editReview.review_content }}</span><br>
+                    <span style="float: left;"> <strong>Rating: </strong><small> {{ editReview.rating }}/5.0 </small></span>
+                    <span class="bookDT"> <strong>Posted: </strong><small style="color: #d02c02;"> {{ editReview.published_date }} </small></span>
+                    <span class="bookDT"> <small><a style="text-decoration: underline;" href="{{url_for('editreview', book_id=book.id)}}">Edit Review</a></small> </span><br><br>
+                </li>
+            {% else %}
+                <li style="list-style-type:none; font-weight:bold;">You have not reviewed this book yet. Click on <a href="{{url_for('reviews', book_id=book.id)}}">{{ book.title }} </a> to review it. </li>
+            {% endif %}
+        </ul>
+        
+        <ul style="list-style-type: none;">
+            {% for review in reviews %}
+                <li>
+                    <span style="color: #341444; margin-bottom: 5px;"><strong>{{review.username}}</strong></span><br>
+                    <img src="{{url_for('static', filename='image/avatar.jpg')}}" alt="avatar"/><br>
+                    <span class="bookIMG"> {{ review.review_content }}</span><br>
+                    <span style="float: left;"> <strong>Rating: </strong><small> {{ review.rating }}/5.0 </small></span>
+                    <span id="bookDT"> <strong>Posted: </strong><small style="color: #d02c02;"> {{ review.published_date }} </small></span>
+                </li><br><br>
+            {% endfor %}
+        </ul>
+    
+    </div>
+</div>
+    
+{% endblock %}

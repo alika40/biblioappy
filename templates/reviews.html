@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+    <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> LOG OUT </a>
+{% endblock %}
+
+{% block content %}
+    <div id="form" class="content">
+        <form action="{{url_for('reviews', book_id=book.id)}}" method="post">
+            <fieldset>
+                <legend>
+                    Write Your Review On: <strong style="font-size: 130%;"> {{ book.title }}.</strong> Written by: <strong style="font-size: 130%;"> <em> {{ book.author }} </em> </strong>
+                </legend>
+                
+                    <label>Review:</label><br>
+                    <textarea autofocus name="review" maxlength="160" placeholder="Leave Your Review Here." required></textarea><br><br> 
+                    <div>
+                        <label>Rating:</label>
+                        <input type="number" name="rating" min="0" max="5" step="0.5" value="5.0">
+                        
+                        <input style="float: right;" type="submit" value="Submit">
+                    </div>
+            </fieldset>
+        </form>
+    </div>        
+{% endblock %}

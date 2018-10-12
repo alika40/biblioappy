@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+    <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> LOG OUT </a>
+{% endblock %}
+
+{% block content %}
+    <div id="form" class="content">
+        <form action="" method="post">
+            <fieldset>
+                <legend>
+                    Edit Your Review On: <strong style="font-size: 130%;"> {{ editreview.title }}.</strong> Written by: <strong style="font-size: 130%;"> <em> {{ editreview.author }} </em> </strong>
+                </legend>
+                
+                    <label>Review:</label><br>
+                    <textarea name="review" maxlength="160" required> {{ editreview.review_content }} </textarea><br><br> 
+
+                    <div>
+                        <label>Rating:</label>
+                        <input type="number" name="rating" min="0" max="5" step="0.5" value="{{ editreview.rating }}">
+                        
+                        <input style="float: right;" type="submit" value="Submit">
+                    </div>
+            </fieldset>
+        </form>
+    </div>
+            
+{% endblock %}

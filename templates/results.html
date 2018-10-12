@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> LOG OUT </a>
+{% endblock %}
+
+{% block content %}
+
+    
+<div class="content">
+        <p>  Click on a book to view book's details plus total reviews garnered. You can drop your review as well. </p>
+        <ol>
+            {% for book in books %}
+                <li id="resultsHTML"><a href="{{ url_for('bookDetails', book_id=book.id)}}"> {{ book.title }} </a></li>
+            {% endfor %}
+        </ol>   
+</div>
+    
+{% endblock %}

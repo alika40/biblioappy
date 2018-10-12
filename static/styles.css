@@ -1,0 +1,1127 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-family: cursive, fantasy, sans-serif, helvetical;
+    font-size: 16px;
+}
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+}
+
+/* home.html*/
+.modal-header, .unique{
+  background-color: #3b5998;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  padding:35px 50px;
+}
+.modal-header .close{
+  color: #ad0e05;
+  font-size: 2.5em;
+}
+.modal-header{padding:35px 50px;}
+.modal-footer {
+   background-color: #aaa;
+}
+.content .modal-footer p{font-size: 1em;}
+#loginBtn{
+  font-weight: bold;
+  background: #3b5998;
+  color: #fff;
+}
+#loginBtn:hover{
+  color: #000;
+  background: #b3bbbc;
+}
+#regBtn{
+  font-weight: bold;
+   background: #3b5998;
+   color: #fff;
+}
+#regBtn:hover{
+  color: #000;
+  background: #b3bbbc;
+}
+
+#myBtn{
+   float: left;
+   margin: 15px auto auto 0;
+   background: #3b5998;
+   color: #fff;
+}
+
+#myBtn1{
+   float: right;
+   margin: 15px 0 auto auto;
+   background: #3b5998;
+   color: #fff;
+}
+#myBtn:hover{
+   color: #000;
+   background: #b3bbbc;
+}
+#myBtn1:hover{
+   color: #000;
+   background: #b3bbbc;
+}
+.btn1:hover{background-color: #3b5998; color: #000;}
+
+/*Home html IMAGES */
+#images {
+    width: 60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+    box-shadow: 0 0 15px #000;
+    border-radius: 10px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-bottom: 25px;
+}
+.clearfix{border: 2px solid #aaa; padding: 40px 20px 20px 20px;}
+.bookimg{
+   float: left;
+   margin-right: 10px;
+   width:25%;
+   height:25%;
+}
+.clearfix h2{font-family: Aton; margin-top: -5px;}
+.clearfix span{font-family: bree serif;}
+.clearfix .author{display: block; margin-bottom: 8px; font-size: 1.15em;}
+.clearfix .courtesy{float: right; clear: right; font-size: smaller;}
+
+#form input[type=submit] { 
+    line-height: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right,  #999, #eee);
+    cursor: pointer;
+}
+#form input[type=submit]:hover {
+    box-shadow: 2px 2px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right, #777, #ddd);
+}
+
+#bookDetailsContainer #bookDetailsH2{
+   color: red;
+   font-family: Nosifer;
+   margin-top: 4%;
+   margin-bottom: 4%;
+   font-weight: bold;
+   font-size: 3.25em;
+   text-align: center;
+}
+#bookDetailsContainer #bookDetailscontent h2{
+  margin-bottom:8px;
+  color:#000;
+  font-family:Eater;
+  }
+#bookDetailsContainer{
+   border: 1px solid #555;
+   border-radius:15px;
+   width: 70%;
+   height: auto;
+   background:  #b3bbbc;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10vh;
+   box-shadow: 0 0 15px #000;
+}
+#bookDetailsContainer #bookDetailscontent{
+   border-radius:0 0 15px 15px;
+   height: auto;
+   width: 100%;
+   background: #f9f9f9;
+   padding: 30px 30px 30px;
+   background:  #f9f9f9;
+}
+#bookDetailscontent .bookDetails span, p{
+   color: #000;
+   font-family: Arial;
+   font-size: 1.25em;
+}
+#bookDetailscontent ul li span{
+  color: #000;
+  font-family: Arial;
+  font-size: 1.2em;
+}
+#bookDetailscontent ul li IMG{margin-bottom: 10px; width:15%; height:15%;}
+#bookDetailscontent ul li #bookDT{margin-left: 50px;}
+#bookDetailscontent ul li .bookDT{margin-left: 25px;}
+/*Review and edit HTMLs */
+ .content textarea{
+  width: 100%;
+  height: 120px;
+ }
+ 
+#acrossLogout{
+   margin-top: 15px;
+   margin-right: 20px;
+   float: right;
+   background: #b3bbbc;
+   color: #000;
+}
+#acrossLogout:hover{
+   color: white;
+   background: #3b5998;
+}   
+
+.btn1{
+   background-color: #3b5998;
+   color: white;
+   padding: 20px 10px 20px 5px;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+   height: 100%;
+   border-radius: 0;
+}
+#header #home{font-size: 18px;}
+.btn1:hover {
+   background-color: #3b5998;
+   color: #000;
+   text-decoration: none;
+}
+.btn2{
+   background-color: #3b5998;
+   color: #fff;
+   border: none;
+   padding: 14px 15px;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+   height: 100%;
+   border-radius: 0;
+}
+.btn2:hover {
+   background-color: #b3bbbc;
+   color: #000;
+   border: none;
+}
+ol #resultsHTML{
+  font-weight: bold;
+  color: #000;
+  margin-left: 25%;
+  list-style-type: none;
+  margin-bottom: 4px;
+}
+ol #resultsHTML a{
+  text-decoration: underline;
+}
+.anlink{
+   color: white;
+   text-decoration: none;
+   font-size: 18px;                
+}
+
+#header{
+  display: inline-block;
+   top: 0;
+   text-align: center; 
+   width:100%;
+   background:  #3b5998;
+   color: #f2021a;
+   height: 70px;
+}
+#header #siteName{
+  font-size: 300%;
+  color: #fff;
+  font-family: Bigelow Rules;
+}
+
+.error{
+   text-align: center;
+   margin-top: 30px;
+   color: red;
+}
+.message{
+   text-align: center;
+   margin-top: 30px;
+   color: cyan;
+}
+ol li{
+   font-size: 1.25em;
+}
+
+.container-fluid{
+  min-height: calc(100vh - 195px);
+  background:  white;
+}
+.content{
+   border: 1px solid #102022;
+   border-radius:15px;
+   width: 70%;
+   height: auto;
+   background: #f9f9f9;
+   padding: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10vh;
+   box-shadow: 0 0 15px #000;
+}
+.content p{
+   font-weight: bold;
+   font-size: 1.5em;
+   margin-bottom: 30px;
+}
+.dashboardContent{
+   border: 1px solid #102022;
+   border-radius:15px;
+   width: 70%;
+   height: auto;
+   background: #f9f9f9;
+   padding: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 25vh;
+   box-shadow: 0 0 15px #000;
+}
+.dashboardContent input[type=search]{
+   width: 70%;
+   border: 1px solid #000;
+   padding-left: 15px;
+   font-size: large;
+   margin-left: 14%;
+   height: 52px;
+}
+#intro{
+   width: 100%;
+   height: auto;
+   margin-top: 15vh;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 20px 40px 10px 40px;
+}
+#intro span{
+  color: red;
+  font-weight: bold;
+}
+
+.footer1 {
+   text-align: center;
+   color: #fff;
+   width: 100%;
+   height: 80px;
+   padding-top: 10px;
+   background:   #3b5998;
+}
+
+#social{
+  background: white;
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+}
+#social span{
+  float: right;
+  font-size: 21px;
+  background: #aaa;
+  padding: 0 20px 0 10px;
+}
+
+
+/* Responsive layout - when the screen is less than 600px width*/ 
+@media only screen and (max-width: 600px) {
+.container-fluid{
+  min-height: calc(100vh - 155px);
+  }
+  #header #siteName{
+  font-size: 205%;
+  font-weight: bold;
+  }
+.btn1{
+   background-color: #3b5998;
+   color: white;
+   padding: 10px 5px 10px 2px;
+   font-size: .95em;
+   font-weight: bold;
+   cursor: pointer;
+   height: 100%;
+   border-radius: 0;
+}
+.btn1:hover{background: #3b5998; color: #000;}
+#header #home{font-size: .925em;}
+  #header {height: 45px;}
+  .modal-content{font-size: .80em;}
+  .modal-header, .unique{
+   font-size: 1.5em;
+   padding:20px 35px;
+  }
+.modal-header .close{
+   color: #ad0e05;
+   font-size: 2.25em;
+   padding: 5px;
+   font-weight: bold;
+  }
+.modal-footer{padding: 10px; font-size: 1em;}
+.modal-footer .btn{
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+#myBtn{
+   margin: 10px auto auto 0;
+   font-size: .75em;
+   padding: 5px;
+   font-weight: bold;
+  }
+#myBtn1{
+   margin: 10px 0 auto auto;
+   font-size: .75em;
+   padding: 5px;
+   font-weight: bold;
+  }
+#loginBtn{font-size: 1.20em;}
+#acrossLogout{
+   margin-top: 5px;
+   margin-right: -3px;
+   font-size: .75em;
+   padding: 3px;
+   border-radius: 2px;
+   font-weight: bold;
+  }
+#regBtn{font-size: 1.20em;}
+.modal-body input{font-size: small; height: 30px;}
+#images {
+    width: 95%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vh;
+    box-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-bottom: 10px;
+}
+.clearfix{border: 1px solid #aaa; padding: 20px 10px 10px 10px;}
+.bookimg{
+   margin-right: 5px;
+   width:30%;
+   height:30%;
+}
+.clearfix h2{font-family: 'Aton'; font-size: 1.85em; font-weight: bold;}
+.clearfix span{font-family: 'bree serif'; font-size: .85em;}
+.clearfix .author{display: block; margin-bottom: 4px; font-size: .90em;}
+.clearfix .courtesy{font-size: .75em;}
+
+#intro{
+   font-size: .95em;
+   margin-top: 7vh;
+   padding: 10px 0 10px 0;
+   padding-bottom: 5px;
+  }
+#intro p{margin-top: 15px;}
+#intro span{
+  font-weight: bold;
+  font-size: .975em;
+  }
+ #intro button{
+  padding: 2px 3px 2px 3px;
+  font-size: .90em;
+  color: white;
+  background: #3b5998;
+  margin-top: -8px;
+ }
+#intro #demo ul li span{color: brown;font-size: 1em;}
+#intro #demo ul li h5{font-size: .95em; margin-bottom: 2px;}
+#intro #demo ul li{margin-left: -25px; font-size: .90em;}
+#intro #demo ul li a{ font-size: .975em;}
+ #intro button:hover{  color: #000; background: #aaa;}
+.dashboardContent{
+   border-radius: 5px;
+   width: 90%;
+   padding: 10px;
+   box-shadow: 0 0 7.5px #000; 
+}
+.dashboardContent input[type=search]{
+   width: 87%;
+   border: 1px solid #000;
+   font-size: smaller;
+   padding-left: 5px;
+   height: 22px;
+   margin-left: 5px;
+}
+.btn2{
+   padding: 4px 5px;
+   font-size: .80em;
+   height: 100%;
+   border-radius: 0;
+   margin-left: -4px;
+}
+.content{
+   border-radius:5px;
+   width: 90%;
+   padding: 10px;
+   box-shadow: 0 0 5px #000;
+}
+.content p{
+  font-size: .90em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  }
+ .content legend{font-size: .95em;}
+ .content textarea{
+  width: 100%;
+  height: 90px;
+  font-size: smaller;
+ }
+ .content input[type=number]{
+  width: 25%;
+  height: 20px;
+  font-size: smaller;
+ }
+ #form input[type=submit] { 
+    line-height: 20px;
+    font-weight: bold;
+    font-size: .90em;
+    border-radius: 2px;
+ }
+ol #resultsHTML{
+  font-weight: bold;
+  margin-left: 5%;
+  font-size: .80em;
+  margin-bottom: 3px;
+  }
+  
+#bookDetailsContainer #bookDetailsH2{
+   color: red;
+   font-family: Nosifer;
+   margin-top: 4%;
+   margin-bottom: 4%;
+   font-weight: bold;
+   font-size: 1.95em;
+  }
+#bookDetailsContainer #bookDetailscontent h2{
+  margin-bottom:5px;
+  font-size: 1.8em;
+  font-family:Eater;
+  }
+#bookDetailsContainer{
+   border-radius:5px;
+   width: 90%;
+   padding: 5px;
+   box-shadow: 0 0 5px #000;
+  }
+#bookDetailsContainer #bookDetailscontent{
+   border-radius:0 0 5px 5px;
+   font-size: .85em;
+   padding: 10px;
+  }
+#bookDetailscontent .bookDetails span, p{font-size: 1em;}
+#bookDetailscontent ul li span{
+  color: #000;
+  font-family: Arial;
+  font-size: 1em;
+}
+#bookDetailscontent ul li IMG{margin-bottom: 5px; width:17%; height:17%;}
+#bookDetailscontent ul li #bookDT{margin-left: 15px; clear: right;}
+#bookDetailscontent ul li .bookDT{margin-left: 15px;}
+#bookDetailscontent ul li{margin-left: -25px;}
+/* Login and Registration HTMLs */
+.content .modal-body{
+  font-size: .85em;
+  }
+.content .modal-header{font-size: 1.5em;}
+.content .modal-body input{font-size: small; height: 30px;}
+.content .modal-footer p{font-size: .90em;}
+.footer1{
+   height: 60px;
+   padding-top: 5px;
+   }
+.footer1 h5{font-size: .85em;}
+.footer1 h6{font-size: .75em;}
+#social{
+  height: 30px;
+  margin-top: 15px;
+  }
+#social span{
+  padding: 0 10px 0 7px;
+  font-size: 1.5em;
+}
+}
+
+/* Responsive layout -Minor Breakpoint- when the screen is less than 600px wide */ 
+@media (min-width: 600.98px){
+.container-fluid{
+  min-height: calc(100vh - 155px);
+  }
+  #header #siteName{
+  font-size: 240%;
+  font-weight: bold;
+  }
+.btn1{
+   background-color: #3b5998;
+   color: white;
+   padding: 12px 7px 12px 2px;
+   font-size: 1.05em;
+   font-weight: bold;
+   cursor: pointer;
+   height: 100%;
+   border-radius: 0;
+}
+.btn1:hover{background-color: #3b5998; color: #000;}
+#header #home{font-size: 1em; font-weight: bold;}
+  #header {height: 50px;}
+  .modal-content{
+   font-size: .95em;
+   width: 75%;
+   margin-left: auto;
+   margin-right: auto;
+   }
+  .modal-header, .unique{
+   font-size: 1.15em;
+   padding:15px 35px;
+  }
+.modal-header .close{
+   color: #ad0e05;
+   font-size: 1.80em;
+   padding: 7px;
+   font-weight: bold;
+  }
+.modal-footer{padding: 12px; font-size: 1em;}
+.modal-footer .btn{
+  padding: 7px;
+  font-weight: bold;
+  font-size: 1.10em;
+}
+#myBtn{
+   margin: 10px auto auto 0;
+   font-size: .80em;
+   padding: 7px;
+   font-weight: bold;
+  }
+#myBtn1{
+   margin: 12px 0 auto auto;
+   font-size: .80em;
+   padding: 7px;
+   font-weight: bold;
+  }
+#loginBtn{font-size: 1.15em;}
+#acrossLogout{
+   margin-top: 10px;
+   margin-right: -4px;
+   font-size: .80em;
+   padding: 4px;
+   border-radius: 3px;
+   font-weight: bold;
+  }
+#regBtn{font-size: 1.15em;}
+.modal-body input{font-size: small; height: 32px;}
+#images {
+    width: 94%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vh;
+    box-shadow: 0 0 5px #000;
+    border-radius: 5px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-bottom: 12px;
+}
+.clearfix{border: 1px solid #aaa; padding: 22px 12px 12px 12px;}
+.bookimg{
+   margin-right: 8px;
+   width:20%;
+   height:20%;
+}
+.clearfix h2{font-family: 'Aton'; font-size: 2em; font-weight: bold;}
+.clearfix span{font-family: 'bree serif'; font-size: 1em;}
+.clearfix .author{display: block; margin-bottom: 5px; font-size: 1em;}
+.clearfix .courtesy{font-size: .90em;}
+
+#intro{
+   font-size: .95em;
+   margin-top: 10vh;
+   padding: 12px;
+   padding-bottom: 7px;
+  }
+#intro span{
+  font-weight: bold;
+  font-size: .95em;
+  }
+#intro #demo ul li span{color: brown;font-size: 1em;}
+#intro #demo ul li h5{font-size: 1.05em; margin-bottom: 1px;}
+#intro #demo ul li{margin-left: -30px;}
+#intro #demo{font-size: .915em;}
+#intro #demo ul li a{ font-size: 1em;}
+#intro button{
+  padding: 3px 5px 3px 5px;
+  font-size: .945em;
+  color: white;
+  background: #3b5998;
+  margin-top: -10px;
+ }
+ #intro button:hover{  color: #000; background: #aaa;}
+.dashboardContent{
+   border-radius: 7px;
+   width: 90%;
+   padding: 12px;
+   box-shadow: 0 0 8px #000; 
+}
+.dashboardContent input[type=search]{
+   width: 90%;
+   border: 1px solid #000;
+   font-size: medium;
+   padding-left: 8px;
+   height: 30px;
+   margin-left: 7px;
+}
+.btn2{
+   padding: 5px;
+   font-size: 1.05em;
+   height: 100%;
+   border-radius: 0;
+   margin-left: -5px;
+}
+.content{
+   border-radius:7px;
+   width: 90%;
+   padding: 12px;
+   box-shadow: 0 0 7px #000;
+}
+.content p{
+  font-size: 1.10em;
+  font-weight: bold;
+  margin-bottom: 7px;
+  }
+ .content legend{font-size: 1em;}
+ .content textarea{
+  width: 100%;
+  height: 100px;
+  font-size: 1em;
+ }
+ .content input[type=number]{
+  width: 25%;
+  height: 22px;
+  font-size: 1em;
+ }
+ #form input[type=submit] { 
+    line-height: 22px;
+    font-weight: bold;
+    font-size: .95em;
+    border-radius: 3px;
+ }
+ol #resultsHTML{
+  font-weight: bold;
+  margin-left: 6%;
+  font-size: .95em;
+  margin-bottom: 5px;
+  }
+  
+#bookDetailsContainer #bookDetailsH2{
+   color: red;
+   font-family: Nosifer;
+   margin-top: 4%;
+   margin-bottom: 4%;
+   font-weight: bold;
+   font-size: 2.25em;
+  }
+#bookDetailsContainer #bookDetailscontent h2{
+  margin-bottom:7px;
+  font-size: 1.75em;
+  font-family:Eater;
+  }
+#bookDetailsContainer{
+   border-radius:7px;
+   width: 90%;
+   padding: 5px;
+   box-shadow: 0 0 5px #000;
+  }
+#bookDetailsContainer #bookDetailscontent{
+   border-radius:0 0 5px 5px;
+   font-size: .90em;
+   padding: 12px 35px;
+  }
+#bookDetailscontent .bookDetails span, p{font-size: 1.15em;}
+#bookDetailscontent ul li span{
+  color: #000;
+  font-family: Arial;
+  font-size: 1.15em;
+}
+#bookDetailscontent ul li IMG{margin-bottom: 5px; width:14%; height:14%;}
+#bookDetailscontent ul li #bookDT{margin-left: 15px; clear: right;}
+#bookDetailscontent ul li .bookDT{margin-left: 15px;}
+#bookDetailscontent ul li{margin-left: -15px;}
+/* Login and Registration HTMLs */
+.content .modal-body{
+  font-size: .90em;
+  }
+.content .modal-header{font-size: 1.5em;}
+.content .modal-body input{font-size: small; height: 30px;}
+.content .modal-footer p{font-size: .90em;}
+.footer1{
+   height: 60px;
+   padding-top: 5px;
+   }
+.footer1 h5{font-size: .90em;}
+.footer1 h6{font-size: .80em;}
+#social{
+  height: 30px;
+  margin-top: 15px;
+  }
+#social span{
+  padding: 0 10px 0 7px;
+  font-size: 1.5em;
+}
+}
+
+/*Responsive layout - when the screen is less than 800px wide */
+@media only screen and (min-width: 800px) {
+/* home.html*/
+.modal-header, .unique{
+  background-color: #3b5998;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  padding:35px 50px;
+}
+.modal-header .close{
+  color: #ad0e05;
+  font-size: 2.5em;
+}
+.modal-header{padding:35px 50px;}
+.modal-footer {
+   background-color: #aaa;
+}
+.content .modal-footer p{font-size: 1em;}
+#loginBtn{
+  font-weight: bold;
+  background: #3b5998;
+  color: #fff;
+}
+#loginBtn:hover{
+  color: #000;
+  background: #b3bbbc;
+}
+#regBtn{
+  font-weight: bold;
+   background: #3b5998;
+   color: #fff;
+}
+#regBtn:hover{
+  color: #000;
+  background: #b3bbbc;
+}
+
+#myBtn{
+   float: left;
+   margin: 15px auto auto 0;
+   background: #3b5998;
+   color: #fff;
+}
+
+#myBtn1{
+   float: right;
+   margin: 15px 0 auto auto;
+   background: #3b5998;
+   color: #fff;
+}
+#myBtn:hover{
+   color: #000;
+   background: #b3bbbc;
+}
+#myBtn1:hover{
+   color: #000;
+   background: #b3bbbc;
+}
+.btn1:hover{background-color: #3b5998; color: #000;}
+
+/*Home html IMAGES */
+#images {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+    box-shadow: 0 0 15px #000;
+    border-radius: 10px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-bottom: 25px;
+}
+.clearfix{border: 2px solid #aaa; padding: 40px 80px 20px 20px;}
+.bookimg{
+   float: left;
+   margin-right: 10px;
+   width:15%;
+   height:15%;
+}
+.clearfix h2{font-family: Aton; margin-top: -5px;}
+.clearfix span{font-family: bree serif;}
+.clearfix .author{display: block; margin-bottom: 8px; font-size: 1.15em;}
+.clearfix .courtesy{float: right; clear: right; font-size: smaller;}
+
+#form input[type=submit] { 
+    line-height: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right,  #999, #eee);
+    cursor: pointer;
+}
+#form input[type=submit]:hover {
+    box-shadow: 2px 2px 1px #000,
+                inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+                inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom right, #777, #ddd);
+}
+
+#bookDetailsContainer #bookDetailsH2{
+   color: red;
+   font-family: Nosifer;
+   margin-top: 4%;
+   margin-bottom: 4%;
+   font-weight: bold;
+   font-size: 3.25em;
+   text-align: center;
+}
+#bookDetailsContainer #bookDetailscontent h2{
+  margin-bottom:8px;
+  color:#000;
+  font-family:Eater;
+  }
+#bookDetailsContainer{
+   border: 1px solid #555;
+   border-radius:15px;
+   width: 70%;
+   height: auto;
+   background:  #b3bbbc;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10vh;
+   box-shadow: 0 0 15px #000;
+}
+#bookDetailsContainer #bookDetailscontent{
+   border-radius:0 0 15px 15px;
+   height: auto;
+   width: 100%;
+   background: #f9f9f9;
+   padding: 30px 30px 30px;
+   background:  #f9f9f9;
+}
+#bookDetailscontent .bookDetails span, p{
+   color: #000;
+   font-family: Arial;
+   font-size: 1.25em;
+}
+#bookDetailscontent ul li span{
+  color: #000;
+  font-family: Arial;
+  font-size: 1.2em;
+}
+#bookDetailscontent ul li IMG{margin-bottom: 10px; width:15%; height:15%;}
+#bookDetailscontent ul li #bookDT{margin-left: 50px;}
+#bookDetailscontent ul li .bookDT{margin-left: 25px;}
+/*Review and edit HTMLs */
+ .content textarea{
+  width: 100%;
+  height: 120px;
+ }
+ 
+#acrossLogout{
+   margin-top: 15px;
+   margin-right: 20px;
+   float: right;
+   background: #b3bbbc;
+   color: #000;
+}
+#acrossLogout:hover{
+   color: white;
+   background: #3b5998;
+}   
+
+.btn1{
+   background-color: #3b5998;
+   color: white;
+   padding: 20px 10px 20px 5px;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+   height: 100%;
+   border-radius: 0;
+}
+#header #home{font-size: 18px;}
+.btn1:hover {
+   background-color: #3b5998;
+   color: #000;
+   text-decoration: none;
+}
+.btn2{
+   background-color: #3b5998;
+   color: #fff;
+   border: none;
+   padding: 14px 15px;
+   font-size: 20px;
+   font-weight: bold;
+   cursor: pointer;
+   height: 100%;
+   border-radius: 0;
+}
+.btn2:hover {
+   background-color: #b3bbbc;
+   color: #000;
+   border: none;
+}
+ol #resultsHTML{
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #000;
+  margin-left: 25%;
+  list-style-type: none;
+  margin-bottom: 4px;
+}
+ol #resultsHTML a{
+  text-decoration: underline;
+}
+.anlink{
+   color: white;
+   text-decoration: none;
+   font-size: 18px;                
+}
+
+#header{
+  display: inline-block;
+   top: 0;
+   text-align: center; 
+   width:100%;
+   background:  #3b5998;
+   color: #f2021a;
+   height: 70px;
+}
+#header #siteName{
+  font-size: 300%;
+  color: #fff;
+  font-family: 'Bigelow Rules';
+  font-weight: bold;
+}
+ol li{
+   font-size: 1.25em;
+}
+
+.container-fluid{
+  min-height: calc(100vh - 195px);
+  background:  white;
+}
+.content{
+   border: 1px solid #102022;
+   border-radius:15px;
+   width: 80%;
+   height: auto;
+   background: #f9f9f9;
+   padding: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10vh;
+   box-shadow: 0 0 15px #000;
+}
+.content p{
+   font-weight: bold;
+   font-size: 1.5em;
+   margin-bottom: 30px;
+}
+.dashboardContent{
+   border: 1px solid #102022;
+   border-radius:15px;
+   width: 85%;
+   height: auto;
+   background: #f9f9f9;
+   padding: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 25vh;
+   box-shadow: 0 0 15px #000;
+}
+.dashboardContent input[type=search]{
+   width: 75%;
+   border: 1px solid #000;
+   padding-left: 15px;
+   font-size: large;
+   margin-left: 14%;
+   height: 52px;
+}
+#intro{
+   width: 100%;
+   height: auto;
+   margin-top: 9vh;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 20px 30px 10px 30px;
+}
+#intro button{
+  padding: 3px 6px 3px 6px;
+  font-size: 1em;
+  color: white;
+  background: #3b5998;
+  margin-top: -10px;
+ }
+ #intro button:hover{  color: #000; background: #aaa;}
+#intro span{
+  color: red;
+  font-weight: bold;
+}
+#intro #demo ul li span{color: brown;}
+#intro #demo{font-size: 1.15em;}
+#intro #demo ul li a{ font-size: .95em;}
+.footer1 {
+   text-align: center;
+   color: #fff;
+   width: 100%;
+   height: 80px;
+   padding-top: 10px;
+   background:   #3b5998;
+}
+
+#social{
+  background: white;
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+}
+#social span{
+  float: right;
+  font-size: 21px;
+  background: #aaa;
+  padding: 0 20px 0 10px;
+}
+}

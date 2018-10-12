@@ -1,0 +1,80 @@
+<!Doctype html>
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="UTF-8">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nosifer|Eater|Bree Serif|Aton|Fast One|Cabin Sketch:700|Bigelow Rules">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='designs.js')}}"></script>
+ 
+        
+        {% block title %}
+            {% if title %}
+                <title> {{ title }} </title>
+            {% else %}
+                <title>HOME</title>
+            {% endif %}
+        {% endblock %}
+        
+    </head>
+    <body>
+        
+    <div id="header">
+        <span class="btn1 anlink" style="float: left;"><a href="{{ (url_for('index')) }}" class="btn1 anlink"> <i class="fa fa-home"></i> Home </a></span>
+        <span id="siteName">BiblioAppy</span>
+        <span id="home" class="btn1" style="float: right;"><i class="fa fa-bars"></i> Menu</span>
+    </div>
+
+    <div class="container-fluid">
+        {% block header %} {% endblock %}
+        
+        
+        <div>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <ul class=flashes style="list-style-type: none">
+                {% for category, message in messages %}
+                    <li class="{{ category }}"> <h2>{{ message }}</h2> </li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+            
+        {% block content %}{% endblock %}
+        </div>
+        
+        <script>
+            $(document).ready(function(){
+                $("#myBtn").click(function(){
+                    $("#myModal").modal();
+                });
+            });
+            
+             $(document).ready(function(){
+                $("#myBtn1").click(function(){
+                    $("#myModal1").modal();
+                });
+            });
+        </script>
+    </div>
+    
+    <div id="social">
+        <span>
+            <a href="https://facebook.com/anthony.alika" target="_blank"> <i class="fa fa-facebook-official" style="color:blue;"></i> </a> 
+            <a href="https://twitter.com/alika40" target="_blank"> <i class="fa fa-twitter" style="color:cyan; margin-left:5px;"></i> </a>
+            <a href="https://api.whatsapp.com/send?phone=2348069393684"> <i class="fa fa-whatsapp" style="color:green; margin-left:5px;"></i> </a>
+            <a href="https://github.com/alika40" target="_blank"> <i class="fa fa-github" style="color:black; margin-left:5px;"></i> </a>
+        </span>
+    </div>
+     
+    <div class="footer1">
+        <h5 style="font-weight:bold;">TRAILBLAZER</h5>
+         <h6>&copy; <script> var myDate = new Date().getFullYear(); document.write( myDate); </script> All Right Reserved.</h6>   
+    </div>
+    </body>
+</html>

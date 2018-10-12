@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
+    <button type="button" class="btn btn-default btn-lg" id="myBtn1">REGISTER</a></button>
+
+    
+    <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Register </h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form" action="{{ url_for('registration') }}" method="post">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> USERNAME</label>
+              <input type="text" name="username" class="form-control" id="usrname" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <label for="email"><span class="glyphicon glyphicon-envelope"></span> EMAIL</label>
+              <input type="text" name="email" class="form-control" id="email" placeholder="Enter password" required>
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> PASSWORD </label>
+              <input type="password" name="password1" class="form-control" id="psw1" placeholder="Enter password" required>
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-repeat"></span> PASSWORD CONFIRMATION</label>
+              <input type="password" name="password2" class="form-control" id="psw2" placeholder="Enter password" required>
+            </div>
+              <button type="submit" class="btn btn-block" id="regBtn"><span class="glyphicon glyphicon-off"></span> Register </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p> Do You Have An Account? <a href="{{ url_for('login') }}">Click to Sign In</a></p>
+        </div>
+      </div> 
+    </div>
+  </div> 
+    
+    
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form" action="{{ url_for('login') }}" method="post">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" name="username" class="form-control" id="usrname" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" name="password" class="form-control" id="psw" placeholder="Enter password" required>
+            </div>
+              <button type="submit" class="btn btn-block" id="loginBtn"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="{{ url_for('registration') }}">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>  
+    </div>
+  </div> 
+{% endblock %}
+
+{% block content %}
+   
+<div id="intro"> 
+  <p>
+    <span>BiblioAppy</span> is a book review site for bibliophiles. The site has about 5,000 books of different genres written by renowned authors in its database.
+    Go ahead and search for your fayourite books, leave a review, and also view other people's reviews.
+  </p>
+  <p>
+    <span>BiblioAppy</span> also has an (API) that other sites can use to add books details, average rating, and review count from <span>BiblioAppy</span> database
+    to their own sites. Click on the API button below to learn how to use API.
+  </p>
+    
+  <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">BiblioAppy API</button>
+  <div id="demo" class="collapse">
+      <ul>
+        <li style="list-style-type:square;">
+          <h5><strong>HOW TO USE API:</strong></h4>
+          <ul>
+            <li><strong>HTTP method:</strong> GET</li>
+            <li><strong>URL:</strong> <a class="alink" href="https://biblioapp.herokuapp.com/api/0312348673/JSON">https://biblioapp.herokuapp.com/api/isbn/JSON </a> </li>
+            <li><strong>Parameters:</strong>
+               <ul>
+                  <li style="list-style-type: decimal;"><span>isbn: </span>book isbn</li>
+                  <li  style="list-style-type: decimal;"><span>format: </span>json</li>
+               </ul> 
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</div>
+  
+
+<div id="images">
+  <div class="clearfix" style="border-radius: 10px 10px 0 0;">
+    <img class="bookimg" src="{{url_for('static', filename='image/I-Robot-First-Edition.jpg')}}" alt="I, Robot"/>
+    <h2><strong> I, Robot </strong></h2>
+    <span class="author"><strong> by Isaac Asimov </strong></span>
+    <span>
+      The three laws of Robotics:
+      1) A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+      2) A robot must obey orders given to it by human beings except where such orders would conflict with the First Law.
+      3) A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+    </span>
+  </div>
+
+  <div class="clearfix">
+    <img class="bookimg" src="{{url_for('static', filename='image/letter.jpg')}}" alt="Love Letters to the Dead"/>
+    <h2><strong>Love Letters to the Dead </strong></h2>
+    <span class="author"><strong> by Ava Dellaira  </strong></span>
+    <span>
+      In the twenty-second century Earth obtains limitless, free energy from a source science little understands:
+      an exchange between Earth and a parallel universe, using a process devised by the aliens. But even free energy has a price.
+      The transference process itself will eventually lead to the destruction of the Earth's Sun--and of Earth itself.
+      Only a few know the terrifying truth--an outcast Earth scientist, a rebellious alien inhabitant of a dying planet,
+      a lunar-born human intuitionist who senses the imminent annihilation of the Sun.  They know the truth--but who will listen?
+      They have foreseen the cost of abundant energy--but who will believe?  These few beings, human and alien, hold the key to the Earth's survival.
+    </span>
+  </div>
+  
+  <div class="clearfix" style="border-radius: 0 0 10px 10px;">
+    <img class="bookimg" src="{{url_for('static', filename='image/gods.jpg')}}" alt="The Gods Themselves"/>
+    <h2><strong> The Gods Themselves </strong></h2>
+    <span class="author"><strong>  by Isaac Asimov </strong></span>
+    <span>
+      In the twenty-second century Earth obtains limitless, free energy from a source science little understands:
+      an exchange between Earth and a parallel universe, using a process devised by the aliens. But even free energy has a price.
+      The transference process itself will eventually lead to the destruction of the Earth's Sun--and of Earth itself.
+      Only a few know the terrifying truth--an outcast Earth scientist, a rebellious alien inhabitant of a dying planet,
+      a lunar-born human intuitionist who senses the imminent annihilation of the Sun.  They know the truth--but who will listen?
+      They have foreseen the cost of abundant energy--but who will believe?  These few beings, human and alien, hold the key to the Earth's survival.
+    </span>
+    <span class="courtesy" style="margin-top: 35px;"><strong>Book Covers and Synopses.</strong></span>
+    <span class="courtesy"><strong>Courtesy:</strong><a href="www.goodreads.com"> GOODREADS </a></span>
+  </div>
+</div>
+
+{% endblock %}

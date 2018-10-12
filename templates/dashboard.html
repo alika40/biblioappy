@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> LOG OUT </a>
+{% endblock %}
+
+{% block content %}
+
+    <div class="dashboardContent">
+        <form action="" method="post">
+            <input autofocus type="search" name="result" placeholder="Search for books by author, title, or isbn.">
+            <button type="submit" class="btn2"> <i class="fa fa-search"></i> </button>
+        </form>
+ 
+    </div>    
+{% endblock %}
