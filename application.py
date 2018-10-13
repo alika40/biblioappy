@@ -123,10 +123,10 @@ def dashboard():
             flash(u'You haven\'t entered anything. Nothing to search for.', 'message')
             return render_template('dashboard.html', title='USER HOME PAGE')
         result += '%' #Concatenating wildcat(%) that goes with LIKE operator with the value from input before passing it.
-        books = db.execute("SELECT * FROM books WHERE author ILIKE :results OR title ILIKE :results OR isbn ILIKE :results ORDER BY author ASC LIMIT 10",
+        books = db.execute("SELECT * FROM books WHERE author ILIKE :results OR title ILIKE :results OR isbn ILIKE :results ORDER BY author ASC LIMIT 25",
                            {"results": result}).fetchall()
         if books is None:
-            flash(u'No match for "{}". format(result)', 'message')
+            flash(u'No match for "{}".' .format(result), 'message')
             return render_template('dashboard.html', title='USER HOME PAGE')
         else:
             return render_template('results.html', title='RESULT PAGE', books=books)
@@ -232,6 +232,8 @@ def api_request(isbn):
         })
     
 
+
+##################################################################
 """    
 @app.route('/<int:book_id>/review/delete')
 def deleteReview(book_id):
@@ -244,9 +246,9 @@ def deleteReview(book_id):
         db.commit
         getBook = db.execute("SELECT * FROM books WHERE id = :id", {"id": book_id}).fetchone()
         return redirect(url_for('bookDetails', book_id=getBook.id))
- """   
+   
     
-#############################################################
+    
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
     if session.get('user'):
@@ -265,3 +267,4 @@ def reset_password_request():
         flash('Check your email for the instructions to reset your password')
         return redirect(url_for('login'))
     return render_template('resetPassword.html', title='Reset Password')
+"""
