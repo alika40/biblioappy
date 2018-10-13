@@ -18,13 +18,7 @@ app = Flask(__name__)
 
 
 
-# Check for environment variable
-LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
-if app.config['LOG_TO_STDOUT']:
-    stream_handler = logging.StreamHandler()
-    stream_handler.setLevel(logging.INFO)
-    app.logger.addHandler(stream_handler)
-             
+# Check for environment variable             
 SECRET_KEY = os.environ.get("SECRET_KEY", default=None)
 if not SECRET_KEY:
     raise RuntimeError("SECRET_KEY is not set")
