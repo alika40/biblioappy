@@ -1,18 +1,23 @@
 {% extends "base.html" %}
 
 {% block header %}
-    <button type="button" class="btn btn-default btn-lg" id="myBtn">Login</button>
-    <button type="button" class="btn btn-default btn-lg" id="myBtn1">REGISTER</a></button>
+
+  <div id="header">
+      <span class="btn1 anlink" style="float: left;"><a href="{{ (url_for('index')) }}" class="btn1 anlink"> <i class="fa fa-home"></i> Home </a></span>
+      <span id="siteName">BiblioAppy</span>
+      <button type="button" class="btn btn-default btn-lg" id="myBtn1">Sign Up</a></button>
+      <button type="button" class="btn btn-default btn-lg" id="myBtn">Sign In</button>
+  </div>
 
     
-    <div class="modal fade" id="myModal1" role="dialog">
-    <div class="modal-dialog">
+  <div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Register </h4>
+          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Sign Up </h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
           <form role="form" action="{{ url_for('registration') }}" method="post">
@@ -32,7 +37,7 @@
               <label for="psw"><span class="glyphicon glyphicon-repeat"></span> PASSWORD CONFIRMATION</label>
               <input type="password" name="password2" class="form-control" id="psw2" placeholder="Enter password" required>
             </div>
-              <button type="submit" class="btn btn-block" id="regBtn"><span class="glyphicon glyphicon-off"></span> Register </button>
+              <button type="submit" class="btn btn-block" id="regBtn"><span class="glyphicon glyphicon-off"></span> Sign Up </button>
           </form>
         </div>
         <div class="modal-footer">
@@ -51,7 +56,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+          <h4 class="unique"><span class="glyphicon glyphicon-lock"></span> Sign In</h4>
         </div>
         <div class="modal-body">
           <form role="form" action="{{ url_for('login') }}" method="post">
@@ -63,7 +68,7 @@
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
               <input type="password" name="password" class="form-control" id="psw" placeholder="Enter password" required>
             </div>
-              <button type="submit" class="btn btn-block" id="loginBtn"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <button type="submit" class="btn btn-block" id="loginBtn"><span class="glyphicon glyphicon-off"></span> Sign In</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -81,7 +86,7 @@
 <div id="intro"> 
   <p>
     <span>BiblioAppy</span> is a book review site for bibliophiles. The site has about 5,000 books of different genres written by renowned authors in its database.
-    Go ahead and search for your fayourite books, leave a review, and also view other people's reviews.
+    <a href="{{ url_for('registration') }}">Sign Up</a> to review and rate your favourite books and also view other people's reviews.
   </p>
   <p>
     <span>BiblioAppy</span> also has an (API) that other sites can use to add books details, average rating, and review count from <span>BiblioAppy</span> database

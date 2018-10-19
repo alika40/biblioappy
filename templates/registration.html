@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 
-{% block header %} {% endblock %}
+{% block header %}
+    <div id="header">
+      <span class="btn1 anlink" style="float: left;"><a href="{{ (url_for('index')) }}" class="btn1 anlink"> <i class="fa fa-home"></i> Home </a></span>
+      <span id="siteName">BiblioAppy</span>
+    </div>
+{% endblock %}
 
 {% block content %}
       <div class="content">

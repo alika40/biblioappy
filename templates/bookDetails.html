@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block header %}
-    <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> LOG OUT </a>
+    <div id="header">
+      <span class="btn1 anlink" style="float: left;"><a href="{{ (url_for('index')) }}" class="btn1 anlink"> <i class="fa fa-home"></i> Home </a></span>
+      <span id="siteName">BiblioAppy</span>
+      <a href="{{ url_for('logout') }}" id="acrossLogout" class="btn btn-lg"><span class="glyphicon glyphicon-log-out"></span> Sign Out </a>
+    </div>
 {% endblock %}
 
 {% block content %}

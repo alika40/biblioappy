@@ -23,16 +23,9 @@
     </head>
     <body>
         
-    <div id="header">
-        <span class="btn1 anlink" style="float: left;"><a href="{{ (url_for('index')) }}" class="btn1 anlink"> <i class="fa fa-home"></i> Home </a></span>
-        <span id="siteName">BiblioAppy</span>
-        <span id="home" class="btn1" style="float: right;"><i class="fa fa-bars"></i> Menu</span>
-    </div>
+{% block header %} {% endblock %}
 
-    <div class="container-fluid">
-        {% block header %} {% endblock %}
-        
-        
+    <div class="container-fluid">    
         <div>
 
             {% with messages = get_flashed_messages(with_categories=true) %}

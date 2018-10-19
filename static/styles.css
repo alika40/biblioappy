@@ -13,7 +13,6 @@ body{
     font-size: 16px;
 }
 
-}
 
 h1,
 h2,
@@ -61,15 +60,17 @@ h6{
 }
 
 #myBtn{
-   float: left;
-   margin: 15px auto auto 0;
+   float: right;
+   margin-right: 10px;
+   margin-top: 20px;
    background: #3b5998;
    color: #fff;
 }
 
 #myBtn1{
    float: right;
-   margin: 15px 0 auto auto;
+   margin-right: 15px;
+   margin-top: 20px;
    background: #3b5998;
    color: #fff;
 }
@@ -182,15 +183,17 @@ h6{
  }
  
 #acrossLogout{
-   margin-top: 15px;
-   margin-right: 20px;
    float: right;
-   background: #b3bbbc;
-   color: #000;
+   margin-right: 15px;
+   margin-top: 15px;
+   background: #3b5998;
+   font-size: .9em;
+   padding: 4px;
+   color: #fff;
 }
 #acrossLogout:hover{
-   color: white;
-   background: #3b5998;
+   color: #000;
+   background: #b3bbbc;
 }   
 
 .btn1{
@@ -314,7 +317,7 @@ ol li{
 #intro{
    width: 100%;
    height: auto;
-   margin-top: 15vh;
+   margin-top: 7vh;
    margin-left: auto;
    margin-right: auto;
    padding: 20px 40px 10px 40px;
@@ -353,7 +356,7 @@ ol li{
   min-height: calc(100vh - 155px);
   }
   #header #siteName{
-  font-size: 205%;
+  font-size: 200%;
   font-weight: bold;
   }
 .btn1{
@@ -387,26 +390,29 @@ ol li{
   font-size: 1.15em;
 }
 #myBtn{
-   margin: 10px auto auto 0;
-   font-size: .75em;
-   padding: 5px;
+   margin: 12px 5px auto auto;
+   border: none;
+   font-size: .735em;
+   padding: 1.5px;
    font-weight: bold;
   }
 #myBtn1{
-   margin: 10px 0 auto auto;
-   font-size: .75em;
-   padding: 5px;
+   margin: 12px 10px auto auto;
+   border: none;
+   font-size: .735em;
+   padding: 1.5px;
    font-weight: bold;
   }
+ #myBtn1:hover,#myBtn:hover{border-radius: 1px;}
 #loginBtn{font-size: 1.20em;}
 #acrossLogout{
-   margin-top: 5px;
-   margin-right: -3px;
-   font-size: .75em;
-   padding: 3px;
-   border-radius: 2px;
+   margin: 12px 10px auto auto;
+   border: none;
+   font-size: .735em;
+   padding: 1.5px;
    font-weight: bold;
   }
+ #acrossLogout:hover{border-radius: 1px;}
 #regBtn{font-size: 1.20em;}
 .modal-body input{font-size: small; height: 30px;}
 #images {
@@ -437,18 +443,18 @@ ol li{
 
 #intro{
    font-size: .95em;
-   margin-top: 7vh;
+   margin-top: -2px;
    padding: 10px 0 10px 0;
    padding-bottom: 5px;
   }
-#intro p{margin-top: 15px;}
+#intro p{margin-top: 10px;}
 #intro span{
   font-weight: bold;
   font-size: .975em;
   }
  #intro button{
-  padding: 2px 3px 2px 3px;
-  font-size: .90em;
+  padding: 2px 2px 2px 2px;
+  font-size: .80em;
   color: white;
   background: #3b5998;
   margin-top: -8px;
@@ -571,8 +577,8 @@ ol #resultsHTML{
 }
 }
 
-/* Responsive layout -Minor Breakpoint- when the screen is less than 600px wide */ 
-@media (min-width: 600.98px){
+/* Responsive layout -Minor Breakpoint- when the screen is greater than 600px wide */ 
+@media (min-width: 600px){
 .container-fluid{
   min-height: calc(100vh - 155px);
   }
@@ -616,26 +622,29 @@ ol #resultsHTML{
   font-size: 1.10em;
 }
 #myBtn{
-   margin: 10px auto auto 0;
+   margin: 12px 5px auto auto;
    font-size: .80em;
-   padding: 7px;
+   padding: 2.5px;
    font-weight: bold;
+   border-radius: 2px;
   }
 #myBtn1{
-   margin: 12px 0 auto auto;
+   margin: 12px 15px auto auto;
    font-size: .80em;
-   padding: 7px;
+   padding: 2.5px;
    font-weight: bold;
+   border-radius: 2px;
   }
+ #myBtn1:hover,#myBtn:hover{border-radius: 2px;}
 #loginBtn{font-size: 1.15em;}
 #acrossLogout{
-   margin-top: 10px;
-   margin-right: -4px;
+   margin: 12px 15px auto auto;
    font-size: .80em;
-   padding: 4px;
-   border-radius: 3px;
+   padding: 2.5px;
    font-weight: bold;
+   border-radius: 2px;
   }
+ #acrossLogout:hover{border-radius: 2px;}
 #regBtn{font-size: 1.15em;}
 .modal-body input{font-size: small; height: 32px;}
 #images {
@@ -666,7 +675,7 @@ ol #resultsHTML{
 
 #intro{
    font-size: .95em;
-   margin-top: 10vh;
+   margin-top: 20px;
    padding: 12px;
    padding-bottom: 7px;
   }
@@ -839,15 +848,17 @@ ol #resultsHTML{
 }
 
 #myBtn{
-   float: left;
-   margin: 15px auto auto 0;
+   float: right;
+   margin-right: 10px;
+   margin-top: 20px;
    background: #3b5998;
    color: #fff;
 }
 
 #myBtn1{
    float: right;
-   margin: 15px 0 auto auto;
+   margin-right: 15px;
+   margin-top: 20px;
    background: #3b5998;
    color: #fff;
 }
@@ -960,16 +971,19 @@ ol #resultsHTML{
  }
  
 #acrossLogout{
-   margin-top: 15px;
-   margin-right: 20px;
    float: right;
-   background: #b3bbbc;
-   color: #000;
+   margin-right: 15px;
+   margin-top: 20px;
+   background: #3b5998;
+   font-size: .90em;
+   padding: 4px;
+   color: #fff;
 }
 #acrossLogout:hover{
-   color: white;
-   background: #3b5998;
-}   
+   color: #000;
+   background: #b3bbbc;
+}
+
 
 .btn1{
    background-color: #3b5998;
@@ -1083,7 +1097,7 @@ ol li{
 #intro{
    width: 100%;
    height: auto;
-   margin-top: 9vh;
+   margin-top: 7vh;
    margin-left: auto;
    margin-right: auto;
    padding: 20px 30px 10px 30px;
