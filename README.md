@@ -18,7 +18,7 @@ The project has the following files:
 
 ## ABOUT PROJECT
 This project is a book review application where users can register and login to search for their favourity books, review and rate them, and can also view reviews written
-by others on those books. 
+by others on those books. Visit https://biblioappy.herokuapp.com to try it out. 
 
 ## FEATURES:
 1.) Users can register, login, and logout.
