@@ -13,7 +13,7 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 psycopg2==2.7.5
-PyJWT==1.6.4
+PyJWT==2.4.0
 PyQt5==5.10.1
 QScintilla==2.10.4
 requests==2.19.1
